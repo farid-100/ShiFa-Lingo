@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bzzzz Language Translator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin-top: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bzzzz Language Translator</h1>
+        <input type="text" id="inputCode" placeholder="Type your code here (e.g., B3 B3 B3)">
+        <button onclick="translate()">Translate</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        const translations = {
+            "B3 B3 B3": "Good Morning",
+            "B3 B4": "I Love You",
+            "B3 B2 B3": "Give Me a Kiss",
+            "B3 B2 B2": "How Are You?",
+            "B3 B3 B2": "I'm Thinking of You",
+            "B3 B2 B3 B2": "Good Night",
+            "B3 B3 B2 B2": "I Miss You",
+            "B3 B3 B3 B2": "I'm Happy",
+            "B3 B2 B2 B3": "Thank You",
+            "B3 B2 B2 B2": "Sorry",
+            "B3 B2 B3 B3 B3": "I'm Hungry",
+            "B3 B3 B2 B3 B2": "You're My Everything",
+            "B3 B3 B3 B2 B2": "Hold My Hand",
+            "B3 B2 B2 B3 B3": "Let's Dance",
+            "B3 B2 B3 B3 B2": "I'm Always with You"
+        };
+
+        function translate() {
+            const input = document.getElementById('inputCode').value.trim();
+            const result = translations[input] || "Code not found";
+            document.getElementById('result').textContent = result;
+        }
+    </script>
+</body>
+</html>
